@@ -1,0 +1,67 @@
+ALGORITHM algo1_sol1
+VAR
+set1, set2: ARRAY_OF INTEGER;
+exist: BOOLEAN := false;
+i,j:INTEGER ;
+BEGIN
+FOR i FROM 1 to set1.length STEP 1 DO
+ FOR j FROM 1 to set2.length STEP 1 DO
+   IF(set1[i]= set2[j])
+  THEN exist=true;
+   END_FOR
+   WHILE (exist=false) DO
+      sum= sum+set1[i];
+   END_WHILE
+END_FOR 
+FOR n FROM 1 to set2.length STEP 1 DO
+ FOR m FROM 1 to set1.length STEP 1 DO
+   IF(set1[n]= set2[m])
+  THEN exist=true;
+   END_FOR
+   WHILE (exist=false) DO
+      sum= sum+set2[m];
+   END_WHILE
+END_FOR 
+
+
+
+ALGORITHM algo2_1_sol1
+VAR
+set1, set2: ARRAY_OF INTEGER;
+exist: BOOLEAN := false;
+i,j:INTEGER ;
+BEGIN
+FOR i FROM 1 to set1.length STEP 1 DO
+ FOR j FROM 1 to set2.length STEP 1 DO
+   IF(set1[i]= set2[j])
+  THEN exist=true;
+   END_FOR
+   WHILE (exist=true) DO
+      sum= sum+set1[i];
+   END_WHILE
+   
+END_FOR 
+FOR n FROM 1 to set2.length STEP 1 DO
+ FOR m FROM 1 to set1.length STEP 1 DO
+   IF(set1[n]= set2[m])
+  THEN exist=true;
+   END_FOR
+   WHILE (exist=false) DO
+      sum= sum+set2[m];
+   END_WHILE
+END_FOR 
+ALGORITHM algo2_2_sol1
+VAR set1, set2:ARRAY_OF INTEGER;
+BEGIN
+FOR i FROM 1 to set1.length STEP 1 DO
+ FOR j FROM 1 to set2.length STEP 1 DO
+   IF(set1[i]= set2[j])
+  THEN 
+   
+   WHILE (exist=false) DO
+      sum= sum+set1[i];
+   END_WHILE
+   END_FOR
+END_FOR 
+
+
